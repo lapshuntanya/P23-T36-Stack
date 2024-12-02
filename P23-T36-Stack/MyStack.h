@@ -54,6 +54,17 @@ namespace myStack {
 				}
 			}
 		}
-		void showStack()const { ... }
+		void showStack()const { 
+			if (isEmpty()) {
+				cout << "MyStack is empty!\n";
+				return;
+			}
+			Node<U>* p = head;
+			while (p != nullptr) {
+				cout << p->info << " ";
+				p = p->next;
+			}
+			cout << endl;
+		}
 	};
 }
