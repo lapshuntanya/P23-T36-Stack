@@ -22,6 +22,9 @@ namespace myStack {
 	public:
 		Stack() { head = current = nullptr; }
 		~Stack() { 
+			while (!isEmpty()) {
+				pop_back();
+			}
 		}
 
 		bool isEmpty()const { 
